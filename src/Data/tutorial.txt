@@ -1,0 +1,159 @@
+Save
+
+Enabled for: offline, server owner 
+Disabled for: client
+
+The save button is used to save the file that the user are editing
+
+The file will automatically be saved when
+1. when the user switch to another file through file explorer on the left side 
+2. when the user click on the run code button
+(the user can turn these settings off in the setting screen)
+
+It is strongly recommended that the user save the editing ile regularly to avoid any data lost
+---
+Create New File
+
+Enabled for: offline, server owner 
+Disabled for: client
+
+The new file button is used to create a new java file in the src folder
+The user can only create one new file at a time
+
+The user can not create a file in the following situation
+1. empty file name 
+2. file name starts with number(java file should start with alphabets)
+3. file name contains illegal characters 
+4. file with the same name already exists 
+---
+Delete
+
+Enabled for: offline, server owner 
+Disabled for: client
+
+The delete button is used to delete a java file in the src folder
+The user can select and delete multiple files at the same time - use ctrl + selection
+
+The file history will not be deleted even when the original file is deleted, in case the user still needs it
+
+the user can not delete a file in the following situation 
+1. the user are trying to delete a directory - not a file
+2. the user opened the file in the code share area - a file can't be deleted while it's opened 
+3. the program doesn't have enough access to delete a file from that folder - in this case, run the program with
+    administrators access
+---
+Export
+
+Enabled for: client 
+Disabled for: offline, server owner
+
+The export button allows the user to enter a file name, then select a location to save the userr file to
+
+the user can not export a file in the following situation 
+1. empty file name 
+2. file name starts with number(java file should start with alphabets)
+3. file name contains illegal characters 
+4. file with the same name already exists 
+5. folder the user selected doesn't exist 
+---
+Run
+
+Enabled for: offline, client, server owner 
+Disabled for: 
+
+This button will compile all the java files in the src folder and run the file that's opened in the
+shared code area.
+
+Warning: If the code involves infinite loop, or Scanner(input from console). Then the program will consume the memory
+rapidly, the user must close the console screen immediately or shut down the whole program if the program is frozen
+---
+File history
+
+! This function is still under development for a better UI
+
+Enabled for: offline, server owner
+Disabled for: client
+
+This button will allow the user to view the edit history of the file that the user opened in the coding area
+
+File histories are stored in txt files, so if the user want to modify/read the file history manually, the user
+can go the projectDirectory//localHistory// to find corresponding file history
+
+File histories will be automatically saved once every 2 minutes by default, the user can change that in the setting
+screen.
+
+File histories will also be automatically saved when the user opens/exits a file
+---
+Invite
+
+Enabled for: offline
+Disabled for: server owner, client
+
+The invite button will open the server screen which allows the user to create a server or join a server
+---
+Setting
+Enabled for: offline, server owner
+Disabled for: client
+
+This button will open the setting page where the user can modify some settings, the settings are stored in a local
+file and will be loaded next time the user reopen the program
+---
+Disconnect
+
+Enabled for: server owner, client 
+Disabled for: offline
+
+The disconnect button closes the running server(server owner) or disconnects the user from the server (client),
+remember to save/export the editing file before doing so
+---
+Server Info
+
+Enabled for: server owner, client
+Disabled for: offline
+
+the user can click on this button to view server info (name, IP, and password)
+---
+Access list
+(Button)
+
+In the offline mode: Save, Create New File, Delete, Run Code, File History, Invite, Setting, Help
+As a client: Export, Disconnect, Run Code, Server Info, Help
+As a server owner: Save, Create New File, Delete, Disconnect, Run Code, File History, Server Info, Setting, Help
+
+Access list
+(Functions)
+
+In the offline mode: file explorer, coding area, console
+As a client: coding area, console
+As a server owner: file explorer, coding area, console
+---
+Code Screen
+Left side:
+file explorer - used to switch between different files, updated when new files are generated/files gets deleted
+file explorer is disabled for client as only the server owner has the access to switch between different files
+
+Middle:
+Buttons - refers to previous sections
+
+Right Top:
+Coding area, editable, all the code here will be shared across the server (when the user are online)
+
+Right Bottom:
+Message area, non-editable, this is where the user receives most of the prompt messages
+---
+Server Screen
+
+There are two tabs in the server screen, one for creating the server, one for joining the server
+
+To create a server, the user must
+1. connected to a network (and the user must close any running VPN)
+2. give the program permission to go through the firewall
+3. write a valid server name (only alphabets and numbers are allowed)
+the server password is auto-generated and can not be changed
+
+To connect/join a server, the user must
+1. enter the correct server name
+2. enter the correct server password
+3. enter the correct server IP
+Make sure that the client's PC is connected to the same internet as the server owner's PC
+Prompts will be shown in console when a client joined the server successfully
