@@ -2,8 +2,8 @@
 An application that allows multiple users to connect and code a modular program simultaneously.
 It also has the capability of compiling and executing Java code using JRE.
 
-## Execute Application.java to run the program
-You will be prompted to select a folder after you run the program, this is the folder that will be used to store all the codes.
+## Execute Application.java to run the program.
+You will be prompted to select a folder after you run the program, this is the folder that will be used to store all the codes you write (Think of this as your project folder).
 
 Note that to connect two users, their computers must be connected to the same network.
 This application sets no upper limit to the number of users that can connect to one server, but when multiple (more than 3) users
